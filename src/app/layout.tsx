@@ -5,6 +5,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 
+import { AppHeader } from "@/components";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -25,7 +27,10 @@ export default async function RootLayout({
     <html lang={locale}>
       <body className={inter.className}>
         <NextIntlClientProvider messages={messages}>
-          {children}
+          <AppHeader />
+          <main className="h-[calc(100dvh-88px)] mt-16 sm:mt-20">
+            {children}
+          </main>
         </NextIntlClientProvider>
       </body>
     </html>
