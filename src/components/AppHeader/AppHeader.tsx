@@ -13,7 +13,7 @@ const TodoSVGIcon = () => (
 
 export default function AppHeader() {
   return (
-    <header className="fixed w-full top-0 inset-x-0 px-4 py-4 sm:px-8 sm:py-6">
+    <header className="fixed max-w-screen-sm mx-auto top-0 inset-x-0 px-4 py-4 sm:py-6">
       <div className="flex items-center gap-2">
         <TodoSVGIcon />
 
