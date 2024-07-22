@@ -14,11 +14,13 @@ export default function Input({ className, ...props }: InputProps) {
     "placeholder:text-zinc-400",
     "ring-1",
     "ring-inset",
-    "ring-zinc-500",
+    "ring-zinc-700",
     "focus:ring-2",
     "focus:ring-inset",
     "focus:ring-orange-600",
     "focus:outline-none",
+    "bg-zinc-800",
+    "shadow-sm",
   ];
 
   return <input className={[...classes, className].join(" ")} {...props} />;
