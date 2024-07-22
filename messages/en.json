@@ -1,5 +1,16 @@
 {
   "TodoPage": {
-    "title": "Simple Todo App"
+    "title": "Simple Todo App",
+    "FormAdd": {
+      "header": "Add a new task",
+      "titleFieldLabel": "Todo title",
+      "titleFieldPlaceholder": "Ex: Buy a coffee",
+      "descriptionFieldLabel": "Todo description",
+      "descriptionFieldPlaceholder": "Ex: Go to starbucks and buy a large capuccino"
+    },
+    "emptyList": "No tasks todo 😎",
+    "TodoItems": {
+      "deleteBtnLabel": "Delete ❌"
+    }
   }
 }

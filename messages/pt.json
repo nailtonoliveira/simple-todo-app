@@ -1,5 +1,13 @@
 {
   "TodoPage": {
-    "title": "App Lista de tarefas Simples"
+    "title": "App Lista de tarefas Simples",
+    "FormAdd": {
+      "header": "Adicionar nova tarefa",
+      "titleField": "Título da tarefa",
+      "titleFieldPlaceholder": "Ex: Comprar um café",
+      "descriptionField": "Description da tarefa",
+      "descriptionFieldPlaceholder": "Ex: Ir ao Starbucks e comprar um capuccino grande"
+    },
+    "emptyList": "Sem tarefas para fazer 😎"
   }
 }
