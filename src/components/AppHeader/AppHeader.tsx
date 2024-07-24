@@ -1,3 +1,5 @@
+import LocaleSwitcher from "../LocaleSwitcher/LocaleSwitcher";
+
 const TodoSVGIcon = () => (
   <svg viewBox="0 0 1024 1024" className="size-7 sm:size-8">
     <path
@@ -13,7 +15,7 @@ const TodoSVGIcon = () => (
 
 export default function AppHeader() {
   return (
-    <header className="fixed max-w-screen-sm mx-auto top-0 inset-x-0 px-4 py-4 sm:py-6">
+    <header className="fixed max-w-screen-sm mx-auto top-0 inset-x-0 px-4 py-4 sm:py-6 flex items-center justify-between">
       <div className="flex items-center gap-2">
         <TodoSVGIcon />
 
@@ -21,6 +23,8 @@ export default function AppHeader() {
           Todo App
         </h1>
       </div>
+
+      <LocaleSwitcher />
     </header>
   );
 }
