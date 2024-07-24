@@ -29,5 +29,9 @@
       "descriptionFieldPlaceholder": "Ex: Ir ao Starbucks e comprar um capuccino grande"
     },
     "emptyList": "Sem tarefas para fazer 😎"
+  },
+  "LocaleSwitcher": {
+    "en": "Inglês",
+    "pt": "Português"
   }
 }

@@ -32,5 +32,9 @@
     "TodoItems": {
       "deleteBtnLabel": "Delete ❌"
     }
+  },
+  "LocaleSwitcher": {
+    "en": "English",
+    "pt": "Portuguese"
   }
 }
