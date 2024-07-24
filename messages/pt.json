@@ -8,6 +8,15 @@
         "submitButtonLabel": "Entrar"
       },
       "signupButtonLabel": "Criar uma conta"
+    },
+    "SignUp": {
+      "pageTitle": "Criação de conta",
+      "Form": {
+        "emailFieldLabel": "E-mail",
+        "passwordFieldLabel": "Password",
+        "submitButtonLabel": "Criar conta"
+      },
+      "signinButtonLabel": "Entrar com conta existente"
     }
   },
   "TodoPage": {

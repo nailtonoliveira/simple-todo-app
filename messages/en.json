@@ -8,6 +8,15 @@
         "submitButtonLabel": "Sign in"
       },
       "signupButtonLabel": "Create an account"
+    },
+    "SignUp": {
+      "pageTitle": "Sign Up",
+      "Form": {
+        "emailFieldLabel": "E-mail",
+        "passwordFieldLabel": "Password",
+        "submitButtonLabel": "Create account"
+      },
+      "signinButtonLabel": "Sign in with exist"
     }
   },
   "TodoPage": {
