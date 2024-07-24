@@ -1,4 +1,15 @@
 {
+  "Auth": {
+    "SignIn": {
+      "pageTitle": "Sign In",
+      "Form": {
+        "emailFieldLabel": "E-mail",
+        "passwordFieldLabel": "Password",
+        "submitButtonLabel": "Sign in"
+      },
+      "signupButtonLabel": "Create an account"
+    }
+  },
   "TodoPage": {
     "title": "Simple Todo App",
     "FormAdd": {
