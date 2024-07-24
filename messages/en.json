@@ -3,9 +3,9 @@
     "title": "Simple Todo App",
     "FormAdd": {
       "header": "Add a new task",
-      "titleFieldLabel": "Todo title",
+      "titleFieldLabel": "Task title",
       "titleFieldPlaceholder": "Ex: Buy a coffee",
-      "descriptionFieldLabel": "Todo description",
+      "descriptionFieldLabel": "Task description",
       "descriptionFieldPlaceholder": "Ex: Go to starbucks and buy a large capuccino"
     },
     "emptyList": "No tasks todo 😎",
