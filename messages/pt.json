@@ -23,12 +23,16 @@
     "title": "App Lista de tarefas Simples",
     "FormAdd": {
       "header": "Adicionar nova tarefa",
-      "titleField": "Título da tarefa",
+      "titleFieldLabel": "Título da tarefa",
       "titleFieldPlaceholder": "Ex: Comprar um café",
-      "descriptionField": "Description da tarefa",
-      "descriptionFieldPlaceholder": "Ex: Ir ao Starbucks e comprar um capuccino grande"
+      "descriptionFieldLabel": "Description da tarefa",
+      "descriptionFieldPlaceholder": "Ex: Ir ao Starbucks e comprar um capuccino grande",
+      "submitButtonLabel": "Adicionar"
     },
-    "emptyList": "Sem tarefas para fazer 😎"
+    "emptyList": "Sem tarefas para fazer 😎",
+    "TodoItems": {
+      "deleteBtnLabel": "Apagar ❌"
+    }
   },
   "LocaleSwitcher": {
     "en": "Inglês",

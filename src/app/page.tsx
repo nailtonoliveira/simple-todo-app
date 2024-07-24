@@ -39,7 +39,7 @@ export default function Home() {
             />
           </div>
 
-          <Button className="self-end">Add</Button>
+          <Button className="self-end">{t("FormAdd.submitButtonLabel")}</Button>
         </form>
       </Card>
 

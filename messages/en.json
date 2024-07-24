@@ -26,7 +26,8 @@
       "titleFieldLabel": "Task title",
       "titleFieldPlaceholder": "Ex: Buy a coffee",
       "descriptionFieldLabel": "Task description",
-      "descriptionFieldPlaceholder": "Ex: Go to starbucks and buy a large capuccino"
+      "descriptionFieldPlaceholder": "Ex: Go to starbucks and buy a large capuccino",
+      "submitButtonLabel": "Add"
     },
     "emptyList": "No tasks todo 😎",
     "TodoItems": {
