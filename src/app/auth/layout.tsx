@@ -7,7 +7,9 @@ export default function AuthLayout({
 }>) {
   return (
     <div className="max-w-md mx-auto h-full flex items-center justify-stretch">
-      <Card className="w-full p-6 flex flex-col gap-4">{children}</Card>
+      <Card className="w-full p-6 flex flex-col gap-4 bg-transparent sm:bg-zinc-900 border-0 sm:border">
+        {children}
+      </Card>
     </div>
   );
 }
