@@ -5,7 +5,7 @@ import { Menu, MenuButton, MenuItem, MenuItems } from "@headlessui/react";
 import { LanguageIcon, CheckIcon } from "@heroicons/react/24/outline";
 
 import { Locale } from "@/locale.config";
-import { setUserLocale } from "@/services/locale";
+import { setUserLocale } from "@/shared/services/locale";
 import Button from "../Button/Button";
 import Typo from "../Typo/Typo";
 
