@@ -10,7 +10,7 @@ export default function Input({ className, ...props }: InputProps) {
     "px-4",
     "text-sm",
     "leading-6",
-    "text-zinc-900",
+    "text-zinc-50",
     "placeholder:text-zinc-400",
     "ring-1",
     "ring-inset",
@@ -21,6 +21,9 @@ export default function Input({ className, ...props }: InputProps) {
     "focus:outline-none",
     "bg-zinc-800",
     "shadow-sm",
+    "transition",
+    "duration-500",
+    "ease-in-out",
   ];
 
   return <input className={[...classes, className].join(" ")} {...props} />;
