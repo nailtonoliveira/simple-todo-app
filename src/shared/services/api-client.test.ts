@@ -1,12 +1,10 @@
 import { vi, test, beforeAll, expect } from "vitest";
 
 import * as ApiClient from "./api-client";
-
-const API_URL = "http://localhost.com";
-const API_KEY = "api-secret-key";
-
-vi.stubEnv("SUPABASE_URL", API_URL);
-vi.stubEnv("SUPABASE_ANON_KEY", API_KEY);
+import {
+  expectApiClientCalls,
+  mockRequest,
+} from "@/test-helpers/fetch-client.mock";
 
 beforeAll(() => {
   vi.spyOn(window, "fetch");
@@ -14,11 +12,10 @@ beforeAll(() => {
 
 const { apiClient } = ApiClient;
 
+const responseMock = { success: true };
+
 test("should fetch called correctly with just required params", async () => {
-  window.fetch = vi.fn().mockResolvedValueOnce({
-    ok: true,
-    json: async () => ({ success: true }),
-  });
+  mockRequest({ response: responseMock });
 
   const endpoint = "/endpoint";
 
@@ -26,24 +23,11 @@ test("should fetch called correctly with just required params", async () => {
 
   expect(result).toEqual({ success: true });
 
-  expect(window.fetch).toHaveBeenCalledWith(
-    new URL(`${API_URL}${endpoint}`),
-    expect.objectContaining({
-      method: "GET",
-      headers: {
-        "Content-type": "application/json",
-        apiKey: API_KEY,
-      },
-    })
-  );
-  expect(window.fetch).toHaveBeenCalledTimes(1);
+  expectApiClientCalls({ endpoint });
 });
 
 test("should fetch called correctly with all available params", async () => {
-  window.fetch = vi.fn().mockResolvedValueOnce({
-    ok: true,
-    json: async () => ({ success: true }),
-  });
+  mockRequest({ response: responseMock });
 
   const config: ApiClient.FetchArgs = {
     endpoint: "/endpoint",
@@ -53,35 +37,17 @@ test("should fetch called correctly with all available params", async () => {
     params: { search: "query" },
   };
 
-  const finalUrl = new URL(`${API_URL}${config.endpoint}`);
-  finalUrl.search = new URLSearchParams(config.params).toString();
-
   const result = await apiClient(config);
 
   expect(result).toEqual({ success: true });
 
-  expect(window.fetch).toHaveBeenCalledWith(
-    finalUrl,
-    expect.objectContaining({
-      method: config.method,
-      headers: {
-        "Content-type": "application/json",
-        apiKey: API_KEY,
-        ...config.headers,
-      },
-      body: JSON.stringify(config.body),
-    })
-  );
-  expect(window.fetch).toHaveBeenCalledTimes(1);
+  expectApiClientCalls(config);
 });
 
 test.fails("should fetch throws when rejected", async () => {
   const errorResponse = { code: "ABC", message: "error on load" };
 
-  window.fetch = vi.fn().mockResolvedValueOnce({
-    ok: false,
-    json: async () => errorResponse,
-  });
+  mockRequest({ response: errorResponse, success: false });
 
   vi.spyOn(ApiClient, "apiClient");
 
